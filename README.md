@@ -3,7 +3,7 @@
 A sleek, editorial-style personal portfolio website for Front-End Developer Noor E ALAM. Built with modern HTML5, Tailwind CSS, and Vanilla JavaScript.
 
 ## 🚀 Live Demo
-- [Live Preview](https://your-domain.vercel.app)
+- [Live Preview](https://noorealam-portfolio.vercel.app/)
 
 ## 🛠 Tech Stack
 - **Structure:** Semantic HTML5
