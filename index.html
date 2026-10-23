@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor E ALAM - Front-End Developer Portfolio</title>
+
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Config -->
+    <script src="./js/tailwind-config.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-surface font-body-md text-on-surface">
+
+    <!-- Header -->
+<!-- Header with Responsive Hamburger Menu -->
+  <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-surface-container-high md:border-none shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-16 max-w-7xl mx-auto px-6 lg:px-space-lg flex items-center justify-between">
+      <!-- Logo -->
+      <a class="font-headline-sm tracking-tight text-on-surface" href="#">Noor E ALAM</a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-space-lg">
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#about">About</a>
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#skills">Skills</a>
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#projects">Projects</a>
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#education">Education</a>
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#contact">Contact</a>
+      </nav>
+
+      <!-- Hamburger Button (Mobile Only) -->
+      <button 
+        id="menuBtn" 
+        class="md:hidden w-10 h-10 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container focus:outline-none transition-colors" 
+        aria-label="Toggle Navigation Menu">
+        <span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-surface/95 backdrop-blur-xl border-b border-surface-container-high px-6 py-4 transition-all">
+      <nav class="flex flex-col space-y-3">
+        <a class="mobile-nav-link text-body-md py-2 px-3 rounded-lg hover:bg-surface-container text-on-surface transition-colors" href="#about">About</a>
+        <a class="mobile-nav-link text-body-md py-2 px-3 rounded-lg hover:bg-surface-container text-on-surface transition-colors" href="#skills">Skills</a>
+        <a class="mobile-nav-link text-body-md py-2 px-3 rounded-lg hover:bg-surface-container text-on-surface transition-colors" href="#projects">Projects</a>
+        <a class="mobile-nav-link text-body-md py-2 px-3 rounded-lg hover:bg-surface-container text-on-surface transition-colors" href="#education">Education</a>
+        <a class="mobile-nav-link text-body-md py-2 px-3 rounded-lg hover:bg-surface-container text-on-surface transition-colors" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+    <!-- Main Content -->
+    <main class="w-full pt-16 bg-surface">
+        <div
+            class="flex flex-col w-full text-on-surface bg-surface selection:bg-primary-container selection:text-on-primary-container">
+
+            <!-- Hero Section -->
+            <section
+                class="max-w-6xl mx-auto px-6 lg:px-8 pt-16 pb-24 md:py-32 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="flex flex-col items-start space-y-8">
+                    <div
+                        class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container text-body-sm font-label-md text-primary">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        Available for new opportunities
+                    </div>
+                    <div class="space-y-4">
+                        <h1 class="font-headline-xl text-on-surface" style="font-size: 64px;">NOOR E ALAM</h1>
+                        <p class="font-headline-md text-primary">Front-End Developer</p>
+                        <p class="font-body-lg text-on-surface-variant max-w-xl">
+                            Crafting meticulously designed, high-performance, and accessible web applications with a
+                            focus on editorial aesthetics and flawless user interactions.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-space-md">
+                        <a class="px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md transition-all hover:bg-surface-tint shadow-sm"
+                            href="#projects">
+                            View My Work
+                        </a>
+                        <a class="px-space-md py-3 rounded-lg border border-outline/40 text-on-surface font-label-md transition-all hover:border-primary hover:text-primary"
+                            href="#contact">
+                            Download Resume
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-space-md pt-space-sm text-body-sm text-on-surface-variant">
+                        <span class="font-label-md text-outline">CONNECT:</span>
+                        <a class="hover:text-primary transition-colors" href="https://github.com"
+                            rel="noopener noreferrer" target="_blank">GitHub</a>
+                        <span>/</span>
+                        <a class="hover:text-primary transition-colors" href="https://linkedin.com"
+                            rel="noopener noreferrer" target="_blank">LinkedIn</a>
+                        <span>/</span>
+                        <a class="hover:text-primary transition-colors" href="https://twitter.com"
+                            rel="noopener noreferrer" target="_blank">Twitter</a>
+                    </div>
+                </div>
+                <div class="relative w-full max-w-md mx-auto lg:max-w-none">
+                    <div class="absolute -inset-4 bg-surface-container rounded-2xl transform -rotate-2 -z-10"></div>
+                    <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-xl bg-surface-container-high">
+                        <img class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
+                            alt="Professional studio portrait"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuqbJzMZD99rouEqi7dM85tUELE71Kh2cRzqWKo96svE4FfuE6iELI_k-oCOmjpvsRqRReHBYm5gn9QuyhuBPNhR3vi0evnqnVd0Bf3qEMW2mkLYvbPf7tGk_MQzrnfhBrrNrkGjfrEbPI-9_UQ35TD0HxrWnaGiVsCpeMkVQIpX34eNQj9EGjbH9j46J6jHsqWUsns-PPuCRRX5xzDO5362D-RM6ldpMsVLTSFA_n2ycDWj95TfMvKg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Me Section -->
+            <section class="max-w-6xl mx-auto px-6 lg:px-8 py-24 border-t border-surface-container-high" id="about">
+                <div class="max-w-3xl space-y-8">
+                    <div class="space-y-2">
+                        <span class="font-label-md text-primary tracking-widest uppercase">01 / About Me</span>
+                        <h2 class="font-headline-lg text-on-surface">Designing the digital space with intent and
+                            precision.</h2>
+                    </div>
+                    <div class="space-y-6 font-body-lg text-on-surface-variant">
+                        <p>
+                            My journey into front-end development began at the intersection of graphic design and
+                            computer science. I’ve always been fascinated by how typography, spacing, and
+                            micro-interactions can transform a static screen into an immersive experience.
+                        </p>
+                        <p>
+                            My interface philosophy revolves around restraint and clarity. I believe that true elegance
+                            in software comes from removing unnecessary elements until only the core utility and beauty
+                            remain. Every component I write adheres to strict accessibility standards and semantic HTML
+                            structures.
+                        </p>
+                        <p>
+                            When I’m not refining CSS animations or architecting component libraries, you can find me
+                            exploring modernist architecture, reading design monographs, or contributing to open-source
+                            tooling.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="max-w-6xl mx-auto px-6 lg:px-8 py-24 border-t border-surface-container-high" id="skills">
+                <div class="space-y-12">
+                    <div class="space-y-2 max-w-3xl">
+                        <span class="font-label-md text-primary tracking-widest uppercase">02 / Expertise</span>
+                        <h2 class="font-headline-lg text-on-surface">Technical Capabilities</h2>
+                        <p class="font-body-md text-on-surface-variant">A comprehensive toolkit optimized for modern,
+                            scalable web engineering.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="p-space-lg rounded-2xl bg-surface-container-low space-y-6 shadow-sm">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">code</span>
+                            </div>
+                            <h3 class="font-headline-sm text-on-surface">Core Fundamentals</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">HTML5
+                                    / Semantic Markup</span>
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">CSS3
+                                    / Grid / Flexbox</span>
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">JavaScript
+                                    (ESNext)</span>
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">Web
+                                    Accessibility (a11y)</span>
+                            </div>
+                        </div>
+                        <div class="p-space-lg rounded-2xl bg-surface-container-low space-y-6 shadow-sm">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">layers</span>
+                            </div>
+                            <h3 class="font-headline-sm text-on-surface">Frameworks &amp; Libraries</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">React.js</span>
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">Next.js</span>
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">TypeScript</span>
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">Tailwind
+                                    CSS</span>
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">Redux
+                                    Toolkit</span>
+                            </div>
+                        </div>
+                        <div class="p-space-lg rounded-2xl bg-surface-container-low space-y-6 shadow-sm">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">build</span>
+                            </div>
+                            <h3 class="font-headline-sm text-on-surface">Tools &amp; Workflow</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">Git
+                                    &amp; GitHub</span>
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">Chrome
+                                    DevTools</span>
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">Figma</span>
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">Vite
+                                    / Webpack</span>
+                                <span
+                                    class="px-3 py-1 rounded-full border border-outline/30 text-body-sm text-on-surface">Jest
+                                    / Testing Library</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Projects Section -->
+            <section class="max-w-6xl mx-auto px-6 lg:px-8 py-24 border-t border-surface-container-high" id="projects">
+                <div class="space-y-12">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                        <div class="space-y-2">
+                            <span class="font-label-md text-primary tracking-widest uppercase">03 / Portfolio</span>
+                            <h2 class="font-headline-lg text-on-surface">Featured Projects</h2>
+                        </div>
+                        <p class="font-body-md text-on-surface-variant max-w-md">Selected works highlighting technical
+                            execution, interface architecture, and attention to detail.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Project 1 -->
+                        <div
+                            class="p-6 rounded-2xl bg-surface-container-low flex flex-col justify-between shadow-sm group hover:shadow-md transition-shadow">
+                            <div class="space-y-6">
+                                <div class="aspect-[16/10] rounded-xl overflow-hidden bg-surface-container">
+                                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        alt="Atelier Minimalist E-Commerce"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8DjuSkEWg-ewqaGDjf7l7Hn12-sjFlzTyBlG_JkZhrp5P0JijKeZftvVAxboORxNWv2qyEmLb2thFss2ixia1sW1lokWrDtlMlO-G1ZnvhRuaE-YrY2lksppMz98Aj1YWg_SSGrfudi8Tb3Rarezeqc57uGWkkGEMyGGIeyad4r31sJp4u1WBmklS0PevgZNpAtasW1eGcL5q58bz_mzDc7Je6fvg2Fh2qy81jKY0IhUMWym21m4vBA">
+                                </div>
+                                <div class="space-y-3">
+                                    <h3 class="font-headline-sm text-on-surface">Atelier Minimalist E-Commerce</h3>
+                                    <p class="font-body-sm text-on-surface-variant line-clamp-2">
+                                        A high-performance headless storefront built for a boutique furniture brand
+                                        featuring instant search and fluid page transitions.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 pt-2">
+                                        <span
+                                            class="text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Next.js</span>
+                                        <span
+                                            class="text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">TypeScript</span>
+                                        <span
+                                            class="text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Tailwind</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-6 mt-6 border-t border-outline/10">
+                                <button
+                                    class="text-body-sm font-label-md text-primary hover:underline flex items-center gap-1"
+                                    onclick="openModal('project1')">
+                                    View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                                <div class="flex items-center gap-3">
+                                    <a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                                        href="#">Demo</a>
+                                    <a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                                        href="#">Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div
+                            class="p-6 rounded-2xl bg-surface-container-low flex flex-col justify-between shadow-sm group hover:shadow-md transition-shadow">
+                            <div class="space-y-6">
+                                <div class="aspect-[16/10] rounded-xl overflow-hidden bg-surface-container">
+                                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        alt="Chronos Analytics Dashboard"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcvz_4AoiMCn6SyJQuqdwZYUqA7h5f4y8F0cn680oQYLBYX-8zqFT_FrG1jPw9J18-LAxXaYIcRy5N2-owCkzAu63atshno1Tp9vw493HJd6dJRVaGuLcYlTaLQEd1KmUryQWOGHLaG2S_AnpdyRjx2W_OuZC9fgk_aljMCwCnPIJcjj72OiKcnA8tB-waloGKdf84lu3ieTNvCPZzAbr91NNRht_9B1LB8Z7njh8-XwqVcO7LftLaag">
+                                </div>
+                                <div class="space-y-3">
+                                    <h3 class="font-headline-sm text-on-surface">Chronos Analytics Dashboard</h3>
+                                    <p class="font-body-sm text-on-surface-variant line-clamp-2">
+                                        Real-time data visualization platform engineered for enterprise metrics tracking
+                                        with customizable modular widgets.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 pt-2">
+                                        <span
+                                            class="text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">React</span>
+                                        <span
+                                            class="text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">D3.js</span>
+                                        <span
+                                            class="text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Tailwind</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-6 mt-6 border-t border-outline/10">
+                                <button
+                                    class="text-body-sm font-label-md text-primary hover:underline flex items-center gap-1"
+                                    onclick="openModal('project2')">
+                                    View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                                <div class="flex items-center gap-3">
+                                    <a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                                        href="#">Demo</a>
+                                    <a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                                        href="#">Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div
+                            class="p-6 rounded-2xl bg-surface-container-low flex flex-col justify-between shadow-sm group hover:shadow-md transition-shadow">
+                            <div class="space-y-6">
+                                <div class="aspect-[16/10] rounded-xl overflow-hidden bg-surface-container">
+                                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        alt="Vellum Editorial Journal"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxuNzvLpIB2XNiFowir3P0ypuPdCtgB-psGqIZEbDgxBL3x_FAqWkL-ZnWSXERnFNi-b5HWqxAimgxgvwDOjID0Ll0f72L7F3O2zV_hCrpASn9HPIaS--Ip7xdT6mBPM1I4abqcDWJuyYQ4qa5BtWCs691-92pW64HkoqtiW1rEISjDY6s48edzCPGyOW8CLuIl-4yqCtlyT7YrN8ZdP1PJsNQINe7hi-Tyt2k2EO5zxFmKdVcms2tw">
+                                </div>
+                                <div class="space-y-3">
+                                    <h3 class="font-headline-sm text-on-surface">Vellum Editorial Journal</h3>
+                                    <p class="font-body-sm text-on-surface-variant line-clamp-2">
+                                        A digital publishing platform optimized for long-form reading with dynamic
+                                        typography scaling and offline support.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 pt-2">
+                                        <span
+                                            class="text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Next.js</span>
+                                        <span
+                                            class="text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">MDX</span>
+                                        <span
+                                            class="text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">PWA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-6 mt-6 border-t border-outline/10">
+                                <button
+                                    class="text-body-sm font-label-md text-primary hover:underline flex items-center gap-1"
+                                    onclick="openModal('project3')">
+                                    View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                                <div class="flex items-center gap-3">
+                                    <a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                                        href="#">Demo</a>
+                                    <a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                                        href="#">Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience & Education Section -->
+            <section class="max-w-6xl mx-auto px-6 lg:px-8 py-24 border-t border-surface-container-high" id="education">
+                <div class="space-y-12">
+                    <div class="space-y-2 max-w-3xl">
+                        <span class="font-label-md text-primary tracking-widest uppercase">04 / Background</span>
+                        <h2 class="font-headline-lg text-on-surface">Experience &amp; Education</h2>
+                        <p class="font-body-md text-on-surface-variant">A chronological overview of professional
+                            milestones and academic credentials.</p>
+                    </div>
+                    <div class="max-w-3xl pl-4 md:pl-8 border-l border-outline/30 space-y-12">
+                        <div class="relative space-y-3">
+                            <div
+                                class="absolute -left-[21px] md:-left-[37px] top-1.5 w-3 h-3 rounded-full bg-primary ring-4 ring-surface">
+                            </div>
+                            <div class="font-label-md text-primary">2022 — PRESENT</div>
+                            <h3 class="font-headline-sm text-on-surface">Senior Front-End Engineer</h3>
+                            <div class="text-body-sm text-outline">Vanguard Digital Agency</div>
+                            <p class="font-body-md text-on-surface-variant pt-2">
+                                Lead front-end developer for enterprise client applications. Architected design systems,
+                                improved web performance scores across all metrics by 40%, and mentored junior engineers
+                                in modern React and TypeScript best practices.
+                            </p>
+                        </div>
+                        <div class="relative space-y-3">
+                            <div
+                                class="absolute -left-[21px] md:-left-[37px] top-1.5 w-3 h-3 rounded-full bg-outline/50 ring-4 ring-surface">
+                            </div>
+                            <div class="font-label-md text-primary">2020 — 2022</div>
+                            <h3 class="font-headline-sm text-on-surface">UI / UX Developer</h3>
+                            <div class="text-body-sm text-outline">Studio Monolith</div>
+                            <p class="font-body-md text-on-surface-variant pt-2">
+                                Developed bespoke web interfaces for luxury and architectural brands. Translated complex
+                                design prototypes into pixel-perfect, accessible code utilizing Tailwind CSS and vanilla
+                                JavaScript animations.
+                            </p>
+                        </div>
+                        <div class="relative space-y-3">
+                            <div
+                                class="absolute -left-[21px] md:-left-[37px] top-1.5 w-3 h-3 rounded-full bg-outline/50 ring-4 ring-surface">
+                            </div>
+                            <div class="font-label-md text-primary">2016 — 2020</div>
+                            <h3 class="font-headline-sm text-on-surface">B.S. in Computer Science</h3>
+                            <div class="text-body-sm text-outline">Institute of Technology</div>
+                            <p class="font-body-md text-on-surface-variant pt-2">
+                                Focused on human-computer interaction, software engineering principles, and web
+                                technologies. Graduated with honors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section
+                class="max-w-6xl mx-auto px-6 lg:px-8 py-24 md:py-32 border-t border-surface-container-high text-center"
+                id="contact">
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <div class="space-y-3">
+                        <span class="font-label-md text-primary tracking-widest uppercase">05 / Get in Touch</span>
+                        <h2 class="font-headline-xl text-on-surface">Let's Work Together</h2>
+                        <p class="font-body-lg text-on-surface-variant max-w-xl mx-auto">
+                            Have a project in mind or want to discuss potential opportunities? My inbox is always open.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-space-md pt-4">
+                        <a class="px-space-lg py-4 rounded-lg bg-primary text-on-primary font-label-md transition-all hover:bg-surface-tint shadow-sm flex items-center gap-2"
+                            href="mailto:alex.mercer@example.com">
+                            <span class="material-symbols-outlined text-[18px]">mail</span>
+                            alex.mercer@example.com
+                        </a>
+                        <a class="px-space-lg py-4 rounded-lg border border-outline/40 text-on-surface font-label-md transition-all hover:border-primary hover:text-primary flex items-center gap-2"
+                            href="https://wa.me/8801234567890" rel="noopener noreferrer" target="_blank">
+                            <span class="material-symbols-outlined text-[18px]">chat</span>
+                            WhatsApp Chat
+                        </a>
+                    </div>
+                    <div class="pt-8 text-body-sm text-outline">
+                        Phone: [+880 1234 567890] • Location: Remote / Worldwide
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Details Modal -->
+            <dialog
+                class="p-0 rounded-2xl bg-surface text-on-surface max-w-2xl w-full backdrop:bg-on-surface/40 shadow-2xl open:animate-in open:fade-in zoom-in-95 duration-200"
+                id="projectModal">
+                <div class="p-8 space-y-6 max-h-[85vh] overflow-y-auto">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-headline-md text-on-surface" id="modalTitle">Project Title</h3>
+                        <button
+                            class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors"
+                            onclick="closeModal()">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                    <div class="aspect-[16/10] rounded-xl overflow-hidden bg-surface-container">
+                        <img class="w-full h-full object-cover" id="modalImage" alt="Detailed project view"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOVmY8Q8Lr6oq-vMkp_ErEQMTJqhOLThWh6nA4K4O-2fFPHa-_iFtHekp2n8PaCM8y2Ezp5gPZogyOa_nH9qZ_ZACctBWwyZ0-nzWw2AU9Uaomjr64JaLGC9fdQZFAz-aXXd14aZQCABYvFdbBNp4B7oww21SjKgCrLj2h6eX6IwX7XWbiD0rULUcIY3peoPd0lnctKTJZ65TmrVy5GwEjgLSqPnUuwCDoBLS4vTWZ81ms3YmkAti2ZQ">
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-headline-sm text-primary text-sm tracking-wider uppercase">Overview</h4>
+                            <p class="font-body-md text-on-surface-variant pt-1" id="modalOverview">Project overview
+                                text goes here.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-headline-sm text-primary text-sm tracking-wider uppercase">Tech Stack</h4>
+                            <div class="flex flex-wrap gap-2 pt-2" id="modalTech"></div>
+                        </div>
+                        <div>
+                            <h4 class="font-headline-sm text-primary text-sm tracking-wider uppercase">Key Challenges
+                            </h4>
+                            <p class="font-body-md text-on-surface-variant pt-1" id="modalChallenges">Challenges text
+                                goes here.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-headline-sm text-primary text-sm tracking-wider uppercase">Future
+                                Improvements</h4>
+                            <p class="font-body-md text-on-surface-variant pt-1" id="modalImprovements">Future
+                                improvements text goes here.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-end gap-4 pt-6 border-t border-surface-container-high">
+                        <a class="px-space-md py-2.5 rounded-lg border border-outline/40 text-on-surface font-label-md hover:border-primary hover:text-primary transition-colors"
+                            href="#" id="modalSourceLink" target="_blank">Source Code</a>
+                        <a class="px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-label-md hover:bg-surface-tint transition-colors"
+                            href="#" id="modalDemoLink" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </dialog>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-surface-container-low py-space-xl">
+        <div
+            class="max-w-7xl mx-auto px-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant text-body-sm">
+            <div>© 2024 Noor E ALAM. All rights reserved.</div>
+            <div class="flex gap-space-md">
+                <a class="hover:text-on-surface transition-colors" href="#">GitHub</a>
+                <a class="hover:text-on-surface transition-colors" href="#">LinkedIn</a>
+                <a class="hover:text-on-surface transition-colors" href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript File -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
